@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
-import banco
+import test
 #from django.contrib import admin
 
 # Uncomment the next two lines to enable the admin:
@@ -21,6 +21,8 @@ import banco
 
 
 urlpatterns = patterns('',
-    url(r'^banco/', include('banco.urls')),
+    url(r'^test/', include('test.urls')),
+    url(r'^$', include('test.urls')),
+    #(r'^$', 'imdbaccount.views.form'),
     #url(r'^admin/', include(admin.site.urls)),
 )
